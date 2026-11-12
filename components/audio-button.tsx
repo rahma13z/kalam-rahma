@@ -7,23 +7,32 @@ export function AudioButton({ text, label = "Dengarkan pelafalan", compact = fal
   const [playing, setPlaying] = useState(false);
 
   function handleSpeak() {
-    if (typeof window === "undefined" || !("speechSynthesis" in window)) {
-      window.alert("Browser ini belum mendukung fitur pembaca suara. Coba gunakan Chrome atau Edge versi terbaru.");
+    // Pisahkan pemeriksaan window agar TypeScript tidak menyempitkan
+    // objek window menjadi never pada cabang kondisi gabungan.
+    if (typeof window === "undefined") return;
+
+    const synthesis = window.speechSynthesis;
+    if (typeof synthesis === "undefined") {
+      window.alert(
+        "Browser ini belum mendukung fitur pembaca suara. Coba gunakan Chrome atau Edge versi terbaru."
+      );
       return;
     }
+
     if (playing) {
-      window.speechSynthesis.cancel();
+      synthesis.cancel();
       setPlaying(false);
       return;
     }
-    window.speechSynthesis.cancel();
+
+    synthesis.cancel();
     const utterance = new SpeechSynthesisUtterance(text);
     utterance.lang = "ar-SA";
     utterance.rate = 0.82;
     utterance.onend = () => setPlaying(false);
     utterance.onerror = () => setPlaying(false);
     setPlaying(true);
-    window.speechSynthesis.speak(utterance);
+    synthesis.speak(utterance);
   }
 
   return (
