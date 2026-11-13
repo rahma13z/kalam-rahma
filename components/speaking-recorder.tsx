@@ -71,7 +71,7 @@ export function SpeakingRecorder() {
         <span className="arabic-text" lang="ar" dir="rtl">عَرِّفْ بِنَفْسِكَ</span>
         <h3>Perkenalkan dirimu dalam bahasa Arab.</h3>
         <p>Sampaikan nama, asal daerah, status sebagai pelajar, dan hobi. Gunakan kalimat sederhana yang sudah kamu pelajari.</p>
-        <div style={{ marginTop: 15, paddingTop: 13, borderTop: "1px solid rgba(22,116,93,.12)" }}><strong style={{ fontSize: 10, color: "#527566" }}>Panduan latihan</strong><ol style={{ margin: "8px 0 0", paddingLeft: 17, color: "#7d8e84", fontSize: 10, lineHeight: 1.9 }}><li>Siapkan jawaban selama satu menit.</li><li>Ucapkan kalimat dengan jelas.</li><li>Dengarkan kembali hasil rekaman.</li></ol></div>
+        <div style={{ marginTop: 15, paddingTop: 13, borderTop: "1px solid rgba(97,157,198,.12)" }}><strong style={{ fontSize: 10, color: "#527566" }}>Panduan latihan</strong><ol style={{ margin: "8px 0 0", paddingLeft: 17, color: "#7d8e84", fontSize: 10, lineHeight: 1.9 }}><li>Siapkan jawaban selama satu menit.</li><li>Ucapkan kalimat dengan jelas.</li><li>Dengarkan kembali hasil rekaman.</li></ol></div>
       </div>
       <div className="recorder-control">
         <div className={`mic-orb ${recording ? "recording" : ""}`}>{recording ? <Mic size={37} /> : <MicOff size={37} />}</div>

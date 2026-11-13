@@ -99,3 +99,15 @@ Fitur perekaman membutuhkan izin mikrofon. Browser umumnya mensyaratkan HTTPS at
 ## Batasan versi
 
 Proyek ini merupakan aplikasi frontend interaktif dengan penyimpanan sisi klien, bukan fullstack dengan backend. Jika nanti dibutuhkan akun, sinkronisasi progres lintas perangkat, penyimpanan rekaman di server, atau dashboard guru, tambahkan backend dan database pada fase berikutnya.
+
+
+## Palet warna Maharah Kalam
+
+Identitas visual menggunakan empat warna utama:
+
+- Primary Blue: `#619DC6`
+- Soft Blue: `#A6C8E2`
+- Warm Cream: `#F4F0E2`
+- Peach Accent: `#F4BAA3`
+
+Warna pendukung untuk teks dan garis menggunakan biru tua serta netral hangat agar kontras tetap nyaman dibaca. Pengaturan utama berada di `app/globals.css` dan `tailwind.config.ts`.

@@ -9,7 +9,7 @@ export default function HiwarPage() {
   return (
     <>
       <SectionHeading eyebrow="PRAKTIK PERCAKAPAN" title="Hiwar (الحوار)" description="Pelajari percakapan kontekstual. Dengarkan ungkapan bahasa Arab, pahami artinya, kemudian praktikkan bersama teman atau secara mandiri." />
-      <div className="panel" style={{ marginBottom: 17, background: "linear-gradient(110deg,#eff6f1,#fff)", borderColor: "#e4eee7" }}>
+      <div className="panel" style={{ marginBottom: 17, background: "linear-gradient(110deg,#EAF1F5,#fff)", borderColor: "#E5E0D5" }}>
         <div style={{ display: "flex", alignItems: "center", gap: 13 }}><span className="stat-icon"><MessageCircle size={21} /></span><div><strong style={{ fontSize: 12 }}>Strategi latihan hiwar</strong><p style={{ margin: "5px 0 0", color: "#809087", fontSize: 10, lineHeight: 1.7 }}>Dengarkan satu ungkapan, tirukan dengan suara lantang, lalu ulangi dialog tanpa melihat terjemahan.</p></div></div>
       </div>
       <div className="page-stack" style={{ display: "flex", flexDirection: "column", gap: 15 }}>

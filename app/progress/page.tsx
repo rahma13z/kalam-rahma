@@ -28,14 +28,14 @@ export default function ProgressPage() {
       </div>
       <div className="content-grid">
         <section className="panel">
-          <div className="panel-header"><div><h2>Status setiap materi</h2><p>Selesaikan materi secara bertahap.</p></div><BookOpen size={17} color="#16745d" /></div>
+          <div className="panel-header"><div><h2>Status setiap materi</h2><p>Selesaikan materi secara bertahap.</p></div><BookOpen size={17} color="#619DC6" /></div>
           <div className="activity-list">{lessons.map((lesson) => {
             const done = progress.completedLessons.includes(lesson.id);
             return <div className="activity-row" key={lesson.id}><span className="activity-icon">{done ? <CheckCircle2 size={17} /> : <BookOpen size={17} />}</span><div className="activity-copy"><strong>{lesson.title}</strong><span>{lesson.level} · {lesson.duration} menit</span></div><span className="activity-score">{done ? "Selesai" : <Link href={`/materi/${lesson.id}`} className="text-link">Pelajari</Link>}</span></div>;
           })}</div>
         </section>
         <aside className="panel">
-          <div className="panel-header"><div><h2>Riwayat latihan</h2><p>Hasil kuis terakhir.</p></div><Trophy size={17} color="#a77b43" /></div>
+          <div className="panel-header"><div><h2>Riwayat latihan</h2><p>Hasil kuis terakhir.</p></div><Trophy size={17} color="#A76550" /></div>
           {progress.quizResults.length ? <div className="activity-list">{progress.quizResults.slice(0, 8).map((result) => <div className="activity-row" key={result.id}><span className="activity-icon"><Trophy size={16} /></span><div className="activity-copy"><strong>Latihan kosakata</strong><span>{ready ? new Date(result.date).toLocaleDateString("id-ID", { day: "numeric", month: "short", year: "numeric" }) : ""}</span></div><span className="activity-score">{result.score}/{result.total}</span></div>)}</div> : <div className="empty-state"><Clock3 size={22} style={{ margin: "0 auto 9px" }} /><div>Belum ada riwayat latihan.</div><Link href="/latihan" className="text-link" style={{ justifyContent: "center", marginTop: 10 }}>Mulai latihan <span>→</span></Link></div>}
           <div className="notice" style={{ marginTop: 15 }}>Progres hanya tersedia pada browser dan perangkat ini. Hapus data situs atau gunakan perangkat lain dapat menghilangkan riwayat.</div>
         </aside>

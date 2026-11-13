@@ -5,11 +5,12 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        ink: "#183247",
-        forest: "#16745d",
-        mint: "#e8f3ee",
-        paper: "#f6f8f5",
-        line: "#e5ebe7"
+        ink: "#29465A",
+        forest: "#619DC6",
+        mint: "#A6C8E2",
+        paper: "#F4F0E2",
+        line: "#E5E0D5",
+        peach: "#F4BAA3"
       },
       boxShadow: {
         soft: "0 12px 35px rgba(24, 50, 71, 0.07)"
